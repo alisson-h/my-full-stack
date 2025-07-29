@@ -90,14 +90,14 @@ const AddItem = () => {
                 required
                 invalid={!!errors.title}
                 errorText={errors.title?.message}
-                label="Title"
+                label="Título"
               >
                 <Input
                   id="title"
                   {...register("title", {
-                    required: "É Necessário um titulo.",
+                    required: "É Necessário um título.",
                   })}
-                  placeholder="Title"
+                  placeholder="título..."
                   type="text"
                 />
               </Field>
@@ -105,12 +105,12 @@ const AddItem = () => {
               <Field
                 invalid={!!errors.description}
                 errorText={errors.description?.message}
-                label="Descriçãp"
+                label="Descrição"
               >
                 <Input
                   id="description"
                   {...register("description")}
-                  placeholder="Descrição"
+                  placeholder="descrição..."
                   type="text"
                 />
               </Field>

@@ -33,11 +33,11 @@ const DeleteItem = ({ id }: { id: string }) => {
   const mutation = useMutation({
     mutationFn: deleteItem,
     onSuccess: () => {
-      showSuccessToast("The item was deleted successfully")
+      showSuccessToast("O item foi deletado com sucesso.")
       setIsOpen(false)
     },
     onError: () => {
-      showErrorToast("An error occurred while deleting the item")
+      showErrorToast("Um erro ocorreu ao deletar o item.")
     },
     onSettled: () => {
       queryClient.invalidateQueries()
@@ -67,12 +67,12 @@ const DeleteItem = ({ id }: { id: string }) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <DialogCloseTrigger />
           <DialogHeader>
-            <DialogTitle>Delete Item</DialogTitle>
+            <DialogTitle>Deletar Item</DialogTitle>
           </DialogHeader>
           <DialogBody>
             <Text mb={4}>
-              This item will be permanently deleted. Are you sure? You will not
-              be able to undo this action.
+              Essse item será deletado permanentemente. Você tem certeza? 
+              Você não poderá desfazer essa ação.
             </Text>
           </DialogBody>
 

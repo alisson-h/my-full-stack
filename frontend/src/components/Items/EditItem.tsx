@@ -98,14 +98,14 @@ const EditItem = ({ item }: EditItemProps) => {
                 required
                 invalid={!!errors.title}
                 errorText={errors.title?.message}
-                label="title"
+                label="Título"
               >
                 <Input
                   id="title"
                   {...register("title", {
-                    required: "É Necessário um titulo.",
+                    required: "É Necessário um título.",
                   })}
-                  placeholder="Titulo"
+                  placeholder="título..."
                   type="text"
                 />
               </Field>
@@ -133,11 +133,11 @@ const EditItem = ({ item }: EditItemProps) => {
                   colorPalette="gray"
                   disabled={isSubmitting}
                 >
-                  Cancel
+                  Cancelar
                 </Button>
               </DialogActionTrigger>
               <Button variant="solid" type="submit" loading={isSubmitting}>
-                Save
+                Salvar
               </Button>
             </ButtonGroup>
           </DialogFooter>
