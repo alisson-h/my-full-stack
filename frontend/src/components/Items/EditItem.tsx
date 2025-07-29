@@ -83,29 +83,29 @@ const EditItem = ({ item }: EditItemProps) => {
       <DialogTrigger asChild>
         <Button variant="ghost">
           <FaExchangeAlt fontSize="16px" />
-          Edit Item
+          Adicionar Item
         </Button>
       </DialogTrigger>
       <DialogContent>
         <form onSubmit={handleSubmit(onSubmit)}>
           <DialogHeader>
-            <DialogTitle>Edit Item</DialogTitle>
+            <DialogTitle>Adcionar Item</DialogTitle>
           </DialogHeader>
           <DialogBody>
-            <Text mb={4}>Update the item details below.</Text>
+            <Text mb={4}>Atualize os detalhes do item abaixo..</Text>
             <VStack gap={4}>
               <Field
                 required
                 invalid={!!errors.title}
                 errorText={errors.title?.message}
-                label="Title"
+                label="title"
               >
                 <Input
                   id="title"
                   {...register("title", {
-                    required: "Title is required",
+                    required: "É Necessário um titulo.",
                   })}
-                  placeholder="Title"
+                  placeholder="Titulo"
                   type="text"
                 />
               </Field>
@@ -118,7 +118,7 @@ const EditItem = ({ item }: EditItemProps) => {
                 <Input
                   id="description"
                   {...register("description")}
-                  placeholder="Description"
+                  placeholder="Descrição"
                   type="text"
                 />
               </Field>

@@ -75,16 +75,16 @@ const AddItem = () => {
       <DialogTrigger asChild>
         <Button value="add-item" my={4}>
           <FaPlus fontSize="16px" />
-          Add Item
+          Adicionar Item
         </Button>
       </DialogTrigger>
       <DialogContent>
         <form onSubmit={handleSubmit(onSubmit)}>
           <DialogHeader>
-            <DialogTitle>Add Item</DialogTitle>
+            <DialogTitle>Adicionar Item</DialogTitle>
           </DialogHeader>
           <DialogBody>
-            <Text mb={4}>Fill in the details to add a new item.</Text>
+            <Text mb={4}>Preencha os detalhes para adicionar um novo item.</Text>
             <VStack gap={4}>
               <Field
                 required
@@ -95,7 +95,7 @@ const AddItem = () => {
                 <Input
                   id="title"
                   {...register("title", {
-                    required: "Title is required.",
+                    required: "É Necessário um titulo.",
                   })}
                   placeholder="Title"
                   type="text"
@@ -105,12 +105,12 @@ const AddItem = () => {
               <Field
                 invalid={!!errors.description}
                 errorText={errors.description?.message}
-                label="Description"
+                label="Descriçãp"
               >
                 <Input
                   id="description"
                   {...register("description")}
-                  placeholder="Description"
+                  placeholder="Descrição"
                   type="text"
                 />
               </Field>
@@ -124,7 +124,7 @@ const AddItem = () => {
                 colorPalette="gray"
                 disabled={isSubmitting}
               >
-                Cancel
+                Cancelar
               </Button>
             </DialogActionTrigger>
             <Button
@@ -133,7 +133,7 @@ const AddItem = () => {
               disabled={!isValid}
               loading={isSubmitting}
             >
-              Save
+              Salvar
             </Button>
           </DialogFooter>
         </form>
